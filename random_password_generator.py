@@ -1,5 +1,6 @@
 import random
 import string
+import pyperclip
 
 
 # This program creates a password with 4 or more characters and it will have at least
@@ -56,7 +57,8 @@ while make_password == "y":
 
     password = create_password(number_of_characters)
 
-    
+    # Copies the password to the clipboard
+    pyperclip.copy(password)
 
     print(f"Your new password: {password}")
 
