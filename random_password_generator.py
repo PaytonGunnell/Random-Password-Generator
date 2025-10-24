@@ -1,7 +1,8 @@
 import random
 import string
-import pyperclip
+import subprocess
 
+# Compile via Nuitka: nuitka random_password_generator.py --standalone --onefile --python-for-scons="C:\Users\Payton\AppData\Local\Python312\python.exe"
 
 # This program creates a password with 4 or more characters and it will have at least
 # one uppercase letter, one lowercase letter, one special character, and one number.
@@ -58,7 +59,8 @@ while make_password == "y":
     password = create_password(number_of_characters)
 
     # Copies the password to the clipboard
-    pyperclip.copy(password)
+    # pyperclip.copy(password)
+    subprocess.run("clip", universal_newlines=True, input=password)
 
     print(f"Your new password: {password}")
 
