@@ -1,6 +1,10 @@
 import random
 import string
 
+
+# This program creates a password with 4 or more characters and it will have at least
+# one uppercase letter, one lowercase letter, one special character, and one number.
+
 list_of_special_characters = ['!', '@', '#', '%', '&', '-', '+', '=']
 make_password = "y"
 
@@ -20,6 +24,8 @@ while make_password == "y":
         return str(random.choice(string.ascii_uppercase))
     def random_special_character():
         return str(random.choice(list_of_special_characters))
+    
+    # This function will randomly choose from the 4 above functions to get a random character of any kind.
     def random_character(index):
         random_function_index = 1
         if index <= 4:
